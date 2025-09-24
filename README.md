@@ -1,3 +1,6 @@
+## NAME : PRADEEP SUNDAR
+## REF NO : 212224050030
+ 
  # Analysis-of-open-loop-and-closed-loop-control-system
 ## Aim :
   To analyse the open loop and closed loop system having G(S)=1/(S^2+10S+20)  when an unit step input is applied using MATLAB.
@@ -17,8 +20,18 @@ C(S) and G(S) are in series, 300/(S^2+10S+20)
 Therefore, Closed loop transfer function, (C(S))/(R(S))=300/(S^2+10S+320)
 ## Program: 
 ### Open loop System
+	num = [1];         
+	den = [1 10 20];     
+	sys = tf(num, den); 
+	step (sys);
+
 
 ### Closed loop System
+	num= [300];
+	den= [1 10 320];
+	sys = tf(num,den);
+	t=0:0.01:2;
+	step(sys,t);
 
 ## Procedure:
 	Open MATLAB software
@@ -28,15 +41,19 @@ Therefore, Closed loop transfer function, (C(S))/(R(S))=300/(S^2+10S+320)
 	Analyse the result.
 ## Output:
 ### Open Loop System
+<img width="1898" height="1012" alt="image" src="https://github.com/user-attachments/assets/c93a6e25-e3f6-4792-8fef-efcf61d4722d" />
+
 ### Closed Loop System
+<img width="1919" height="1026" alt="image" src="https://github.com/user-attachments/assets/b1ff341f-eb09-4a38-8617-00b00613d68b" />
+
 ## Result:
 Thus the open loop and closed loop system are analysed and the following conclusions are arrived.
 ### Open loop system
-Steady State Error = <br>
-Settling Time = 
+Steady State Error =0.95 <br>
+Settling Time = 2.50
 ### Closed loop System
-Steady State Error = <br>
-Settling Time = 
+Steady State Error = 0.062 <br>
+Settling Time = 1.61
 
 
 
